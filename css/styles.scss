@@ -2,6 +2,7 @@
 @import "scss/mixins";
 
 
+
 // GENERAL
 
 * {
@@ -69,10 +70,10 @@ nav {
 }
 
 .mobile-menu {
-    visibility: unset;
+    // visibility: unset;
     background: $modal_color;
     text-align: center;
-    width: 30%;
+    width: 20%;
     height: 100vh;
     position: absolute;
     position: fixed;
@@ -80,6 +81,8 @@ nav {
     right: 0;
     padding: 1em;
     z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
     li {
         list-style-type: none;
         padding: 2em 1em;
@@ -93,7 +96,7 @@ nav {
         }
     }
     li:nth-child(1){
-        margin-left: 20em;
+        margin-left: 13em;
     }
 }
 
@@ -130,53 +133,47 @@ header {
             border-radius: 3px;
             padding: 12px 18px;
             margin-top: 4em;
+            transition: all .2s ease;
+            &:hover {
+                background: #a275c9;
+            }
             }
     }
 }
 
-// Media Queries
-@media screen and (max-width:550px){
-    nav {
-        .main-nav {
-            display: none;
-        }
-        .burger-menu {
-            display: block;
-        }
+.nav-active {
+    transform: translateX(0%)!important;
+    transition: transform 0.5s ease-in;
+}
+
+
+// PROJECTS SECTION
+#projects {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10em;
+    height: 100vh;
+    max-width: 1440px;
+    height: 100vh;
+    .section-title{
+        width: 35%;
     }
 
-    .mobile-menu {
-        width: 50%;
-        li:nth-of-type(1) {
-            margin-left: 5em!important;
+    .projects-gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+        grid-gap: 20px;
+
+        .project {
+            height: 280px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 3px;
+                object-fit: cover;
+            }
         }
     }
     
-    header {
-        padding: 0 2em;
-        width: 100%;
-        justify-content: center;
-        h1 {
-            font-size: 2em;
-        }
-        .bold-text {
-            font-size: .9em;
-        }
-        h2 {
-            font-size: .8em;
-
-        }
-        a {
-            text-decoration: none;
-            color: $primary_font_color;
-            .cta-btn {
-                width: 130px;
-                height: 50px;
-                background: #9466BC;
-                border-radius: 3px;
-                padding: 12px 18px;
-                margin-top: 4em;
-                }
-        }
-    }
 }
+
