@@ -1,0 +1,17 @@
+@mixin flex_center($justify-content, $align-items) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin text_style($family, $weight, $size, $color, $lheight, $lspacing) {
+    font: {
+        font-family: $family;
+        weight: $weight;
+        size: $size;
+    }
+
+    color: $color;
+    line-height: $lheight;
+    letter-spacing: $lspacing;
+}

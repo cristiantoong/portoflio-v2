@@ -1,0 +1,182 @@
+@import "scss/config";
+@import "scss/mixins";
+
+
+// GENERAL
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $primary_font;
+    line-height: 1.5;
+    color: $primary_font_color;
+}
+
+body.night {
+    background: $secondary_color;;
+}
+
+nav {
+    @include flex_center(space-between, initial);
+    width: 100%;
+    padding: 1em 5em;
+    background: #2b2b2b;
+    position: fixed;
+    z-index: 99;
+    .logo {
+        h3 {
+            color: white;
+        }
+    }
+    .main-nav {
+        @include flex_center(initial, initial);
+        li {
+            margin-left: 3em;
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: .8em;
+            }
+        }
+    }
+    .burger-menu {
+        display: none;
+        cursor: pointer;
+        .menu1 {
+            width: 25px;
+            height: 1.5px;
+            background: $secondary_font_color;
+            margin-bottom: .3em;
+        }
+        .menu2 {
+            width: 20px;
+            height: 1.5px;
+            background: $secondary_font_color;
+            margin-bottom: .3em;
+        }
+        .menu3{
+            width: 15px;
+            height: 1.5px;
+            background: $secondary_font_color;
+            margin-bottom: .3em;
+        }
+    }
+}
+
+.mobile-menu {
+    visibility: unset;
+    background: $modal_color;
+    text-align: center;
+    width: 30%;
+    height: 100vh;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    z-index: 100;
+    li {
+        list-style-type: none;
+        padding: 2em 1em;
+
+        a {
+            color: $primary_font_color;
+            text-decoration: none;
+            .exit-btn {
+                width: 20px;
+            }
+        }
+    }
+    li:nth-child(1){
+        margin-left: 20em;
+    }
+}
+
+
+
+// HEADER SECTION
+header {
+    padding: 18em 14em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+    h1 {
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+    .bold-text {
+        font-weight: 600;
+    }
+    h2 {
+        display: flex;
+        flex-direction: column;
+        font-weight: 300;
+    }
+    a {
+        text-decoration: none;
+        color: $primary_font_color;
+        .cta-btn {
+            width: 130px;
+            height: 50px;
+            background: #9466BC;
+            border-radius: 3px;
+            padding: 12px 18px;
+            margin-top: 4em;
+            }
+    }
+}
+
+// Media Queries
+@media screen and (max-width:550px){
+    nav {
+        .main-nav {
+            display: none;
+        }
+        .burger-menu {
+            display: block;
+        }
+    }
+
+    .mobile-menu {
+        width: 50%;
+        li:nth-of-type(1) {
+            margin-left: 5em!important;
+        }
+    }
+    
+    header {
+        padding: 0 2em;
+        width: 100%;
+        justify-content: center;
+        h1 {
+            font-size: 2em;
+        }
+        .bold-text {
+            font-size: .9em;
+        }
+        h2 {
+            font-size: .8em;
+
+        }
+        a {
+            text-decoration: none;
+            color: $primary_font_color;
+            .cta-btn {
+                width: 130px;
+                height: 50px;
+                background: #9466BC;
+                border-radius: 3px;
+                padding: 12px 18px;
+                margin-top: 4em;
+                }
+        }
+    }
+}
