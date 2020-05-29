@@ -2,20 +2,19 @@ const menuBtn = document.getElementById('burger-menu');
 const mobileMenu = document.getElementById('mobile-menu');
 const exitBtn = document.getElementById('exit-btn');
 
+// shows mobile menu bar
 menuBtn.addEventListener('click', function(){
-    // mobileMenu.style.visibility = 'unset';
     mobileMenu.style.transform = 'translateX(0%)';
     mobileMenu.style.transition = 'transform 0.3s ease-in';
 });
 
+// close mobile menu bar
 exitBtn.addEventListener('click', function(){
-    // mobileMenu.style.visibility = 'hidden';
     mobileMenu.style.transform = 'translateX(100%)';
     mobileMenu.style.transition = 'transform 0.3s ease-in';
 });
 
 // MODAL
-
 const modalExitBtn = document.getElementById('modal-exit-btn');
 const modal = document.getElementById('modal');
 const modals = document.querySelectorAll('.modal');
@@ -60,7 +59,7 @@ projects.forEach(function(project, index){
 
 
 
-// next and prev buttons
+// next and prev buttons for Modal slider
 prevBtn.addEventListener('click', function(){
     counter--;
 

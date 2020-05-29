@@ -191,7 +191,7 @@ header {
 // MODAL
 #modal {
     background: $secondary_color;
-    opacity: 0.5;
+    background: #303030f8;
     position: fixed;
     top: 0;
     left: 0;
@@ -201,8 +201,8 @@ header {
     z-index: 101;
     .modal-content {
         color: #fff;
-        background: black;
-        padding: 2em;
+        background: rgba(0, 0, 0, 0);
+        padding: 5em;
         position: absolute;
         overflow: hidden;
         top: 50%;
@@ -211,6 +211,23 @@ header {
         max-width: 100%;
         width: 850px;
         height: 100vh;
+
+        .project{
+            display: flex;
+            justify-content: space-evenly;
+            .left-info {
+                width: 350px;
+                height: 250px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .right-info {
+                width: 40%;
+            }
+        }
 
     }
     .prev-btn {
@@ -237,5 +254,22 @@ header {
 
 .modals {
     display: none;
+    .modal{
+        .project-1{
+            display: flex;
+            justify-content: space-evenly;
+            .left-info {
+                width: 350px;
+                height: 250px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .right-info {
+                width: 40%;
+            }
+        }
+    }
 }
 

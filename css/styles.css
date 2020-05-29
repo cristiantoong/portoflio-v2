@@ -232,7 +232,7 @@ header a .cta-btn:hover {
 
 #modal {
   background: #303030;
-  opacity: 0.5;
+  background: #303030f8;
   position: fixed;
   top: 0;
   left: 0;
@@ -246,8 +246,8 @@ header a .cta-btn:hover {
 
 #modal .modal-content {
   color: #fff;
-  background: black;
-  padding: 2em;
+  background: rgba(0, 0, 0, 0);
+  padding: 5em;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -257,6 +257,31 @@ header a .cta-btn:hover {
   max-width: 100%;
   width: 850px;
   height: 100vh;
+}
+
+#modal .modal-content .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#modal .modal-content .project .left-info {
+  width: 350px;
+  height: 250px;
+}
+
+#modal .modal-content .project .left-info img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#modal .modal-content .project .right-info {
+  width: 40%;
 }
 
 #modal .prev-btn {
@@ -283,5 +308,28 @@ header a .cta-btn:hover {
 
 .modals {
   display: none;
+}
+
+.modals .modal .project-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modals .modal .project-1 .left-info {
+  width: 350px;
+  height: 250px;
+}
+
+.modals .modal .project-1 .left-info img {
+  width: 100%;
+  height: 100%;
+}
+
+.modals .modal .project-1 .right-info {
+  width: 40%;
 }
 /*# sourceMappingURL=styles.css.map */
