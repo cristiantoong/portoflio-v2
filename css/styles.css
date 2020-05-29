@@ -124,7 +124,7 @@ nav .burger-menu .menu3 {
 }
 
 header {
-  padding: 18em 14em;
+  padding: 18em 9em;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,6 +142,7 @@ header {
 header h1 {
   font-weight: 300;
   margin-bottom: 1em;
+  font-size: 3em;
 }
 
 header .bold-text {
@@ -157,6 +158,7 @@ header h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   font-weight: 300;
+  font-size: 1.4em;
 }
 
 header a {
@@ -165,11 +167,12 @@ header a {
 }
 
 header a .cta-btn {
-  width: 130px;
+  font-size: 1.2em;
+  width: 158px;
   height: 50px;
   background: #9466BC;
   border-radius: 3px;
-  padding: 12px 18px;
+  padding: 10px 24px;
   margin-top: 4em;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -202,26 +205,77 @@ header a .cta-btn:hover {
 }
 
 #projects .section-title {
-  width: 35%;
+  margin-right: 2em;
 }
 
 #projects .projects-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(19em, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(19em, 1fr));
+  -ms-grid-columns: (minmax(19em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+  -ms-grid-rows: (250px)[6];
+      grid-template-rows: repeat(6, 250px);
   grid-gap: 20px;
 }
 
 #projects .projects-gallery .project {
-  height: 280px;
+  cursor: pointer;
 }
 
 #projects .projects-gallery .project img {
   width: 100%;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#modal {
+  background: #303030;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 100;
+}
+
+#modal .modal-content {
+  color: #fff;
+  background: black;
+  padding: 2em;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+}
+
+#modal .prev-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 32%;
+}
+
+#modal .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 66%;
+}
+
+#modal .exit-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 9%;
+  right: 3%;
 }
 /*# sourceMappingURL=styles.css.map */
