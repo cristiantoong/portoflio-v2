@@ -18,11 +18,15 @@ exitBtn.addEventListener('click', function(){
 
 const modalExitBtn = document.getElementById('modal-exit-btn');
 const modal = document.getElementById('modal');
+const modals = document.querySelectorAll('.modal');
+const projects = document.querySelectorAll('.project');
+let modalContent = document.querySelector('.modal-content');
+let modalList = [];
+let counter = 0;
 
 modalExitBtn.addEventListener('click', function(){
     modal.style.display = 'none';
 });
-
 
 
 // Hide modal on outside click
@@ -32,4 +36,25 @@ window.addEventListener('click', function(e){
     } else {
         return false
     }
+    
 });
+
+
+
+projects.forEach(function(project, index){
+    project.addEventListener('click', function(e){
+        // show modal
+        modal.style.display = 'block';
+        // console.log(e.target.parentElement, index)
+        
+        // display each project image content when click
+        if(e.target.parentElement.classList.contains(`p${index + 1}`)){
+            modalContent.innerHTML = modals[index].innerHTML;
+        }
+
+        
+    });  
+});
+
+
+

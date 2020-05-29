@@ -255,21 +255,22 @@ header a .cta-btn:hover {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 100%;
-  width: 400px;
+  width: 850px;
+  height: 100vh;
 }
 
 #modal .prev-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 32%;
+  left: 14%;
 }
 
 #modal .next-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 66%;
+  left: 84%;
 }
 
 #modal .exit-btn {
@@ -277,5 +278,9 @@ header a .cta-btn:hover {
   position: absolute;
   top: 9%;
   right: 3%;
+}
+
+.modals {
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
