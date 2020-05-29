@@ -241,7 +241,7 @@ header a .cta-btn:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 100;
+  z-index: 101;
 }
 
 #modal .modal-content {
@@ -263,14 +263,15 @@ header a .cta-btn:hover {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 14%;
+  left: 0%;
+  z-index: 102;
 }
 
 #modal .next-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 84%;
+  left: 97%;
 }
 
 #modal .exit-btn {

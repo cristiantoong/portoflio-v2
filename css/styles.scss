@@ -198,7 +198,7 @@ header {
     right: 0;
     bottom: 0;
     display: flex;
-    z-index: 100;
+    z-index: 101;
     .modal-content {
         color: #fff;
         background: black;
@@ -211,19 +211,21 @@ header {
         max-width: 100%;
         width: 850px;
         height: 100vh;
+
     }
     .prev-btn {
         cursor: pointer;
         position: absolute;
         top: 40%;
-        left: 14%;
+        left: 0%;
+        z-index: 102;
 
     }
     .next-btn {
         cursor: pointer;
         position: absolute;
         top: 40%;
-        left: 84%;
+        left: 97%;
     }
     .exit-btn {
         cursor: pointer;

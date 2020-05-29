@@ -20,6 +20,8 @@ const modalExitBtn = document.getElementById('modal-exit-btn');
 const modal = document.getElementById('modal');
 const modals = document.querySelectorAll('.modal');
 const projects = document.querySelectorAll('.project');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 let modalContent = document.querySelector('.modal-content');
 let modalList = [];
 let counter = 0;
@@ -57,4 +59,25 @@ projects.forEach(function(project, index){
 });
 
 
+
+// next and prev buttons
+prevBtn.addEventListener('click', function(){
+    counter--;
+
+    if(counter < 0){
+        counter = modals.length - 1;
+    }
+
+    modalContent.innerHTML = modals[counter].innerHTML;
+
+})
+
+nextBtn.addEventListener('click', function(){
+    counter++;
+    if (counter > modals.length - 1) {
+      counter = 0;
+    }
+    modalContent.innerHTML = modals[counter].innerHTML;
+
+})
 
