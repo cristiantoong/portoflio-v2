@@ -46,6 +46,8 @@ projects.forEach(function(project, index){
     project.addEventListener('click', function(e){
         // show modal
         modal.style.display = 'block';
+        modal.style.transition = 'all 0.5s ease-in;';
+        modalContent.style.transition = 'all 0.5s ease-in;';
         // console.log(e.target.parentElement, index)
         
         // display each project image content when click

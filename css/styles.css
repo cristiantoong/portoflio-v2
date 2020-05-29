@@ -241,13 +241,14 @@ header a .cta-btn:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   z-index: 101;
 }
 
 #modal .modal-content {
   color: #fff;
   background: rgba(0, 0, 0, 0);
-  padding: 5em;
+  padding: 3em 0;
   position: absolute;
   overflow: hidden;
   top: 50%;
@@ -278,6 +279,7 @@ header a .cta-btn:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 5px;
 }
 
 #modal .modal-content .project .right-info {
@@ -288,7 +290,7 @@ header a .cta-btn:hover {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 0%;
+  left: 20%;
   z-index: 102;
 }
 
@@ -296,14 +298,14 @@ header a .cta-btn:hover {
   cursor: pointer;
   position: absolute;
   top: 40%;
-  left: 97%;
+  left: 78%;
 }
 
 #modal .exit-btn {
   cursor: pointer;
   position: absolute;
-  top: 9%;
-  right: 3%;
+  top: 3%;
+  right: 1%;
 }
 
 .modals {
