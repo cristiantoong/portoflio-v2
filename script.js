@@ -53,6 +53,8 @@ projects.forEach(function(project, index){
         // display each project image content when click
         if(e.target.parentElement.classList.contains(`p${index + 1}`)){
             modalContent.innerHTML = modals[index].innerHTML;
+
+        e.preventDefault();
         }
 
         

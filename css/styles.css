@@ -286,7 +286,42 @@ header a .cta-btn:hover {
   width: 40%;
 }
 
-#modal .prev-btn {
+#modal .modal-content .project .right-info h2 {
+  margin-bottom: 1em;
+}
+
+#modal .modal-content .project .right-info .technologies {
+  margin-bottom: 2.4em;
+}
+
+#modal .modal-content .project .right-info .technologies h4 {
+  font-weight: 600;
+}
+
+#modal .modal-content .project .right-info .technologies p {
+  font-weight: 300;
+}
+
+#modal .modal-content .project .right-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#modal .modal-content .project .right-info ul li {
+  margin-right: 1em;
+  list-style-type: none;
+}
+
+#modal .modal-content .project .right-info ul li a {
+  color: #fff;
+  text-decoration: none;
+  border: 0.5px solid #848484;
+  border-radius: 3px;
+  padding: .5em 1em;
+}
+
+.prev-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -294,14 +329,14 @@ header a .cta-btn:hover {
   z-index: 102;
 }
 
-#modal .next-btn {
+.next-btn {
   cursor: pointer;
   position: absolute;
   top: 40%;
   left: 78%;
 }
 
-#modal .exit-btn {
+.exit-btn {
   cursor: pointer;
   position: absolute;
   top: 3%;
@@ -333,5 +368,40 @@ header a .cta-btn:hover {
 
 .modals .modal .project-1 .right-info {
   width: 40%;
+}
+
+.modals .modal .project-1 .right-info h2 {
+  margin-bottom: 1em;
+}
+
+.modals .modal .project-1 .right-info .technologies {
+  margin-bottom: 2.4em;
+}
+
+.modals .modal .project-1 .right-info .technologies h4 {
+  font-weight: 600;
+}
+
+.modals .modal .project-1 .right-info .technologies p {
+  font-weight: 300;
+}
+
+.modals .modal .project-1 .right-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modals .modal .project-1 .right-info ul li {
+  margin-right: 1em;
+  list-style-type: none;
+}
+
+.modals .modal .project-1 .right-info ul li a {
+  color: #fff;
+  text-decoration: none;
+  border: 0.5px solid #848484;
+  border-radius: 3px;
+  padding: .5em 1em;
 }
 /*# sourceMappingURL=styles.css.map */

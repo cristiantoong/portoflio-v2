@@ -228,6 +228,33 @@ header {
             }
             .right-info {
                 width: 40%;
+                h2 {
+                    margin-bottom: 1em;
+                }
+                .technologies{
+                    margin-bottom: 2.4em;
+                    h4 {
+                        font-weight: 600;
+                    }
+                    p {
+                        font-weight: 300;
+                    }
+                }
+                ul {
+                    display: flex;
+                    li {
+                        margin-right: 1em;
+                        list-style-type: none;
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            border: .5px solid $secondary_font_color;
+                            border-radius: 3px;
+                            padding: .5em 1em;
+                        }
+                    }
+                    }
+                }
             }
         }
 
@@ -252,7 +279,7 @@ header {
         top: 3%;
         right: 1%;
     }
-}
+
 
 .modals {
     display: none;
@@ -270,6 +297,34 @@ header {
             }
             .right-info {
                 width: 40%;
+                h2 {
+                    margin-bottom: 1em;
+                    
+                }
+                .technologies{
+                    margin-bottom: 2.4em;
+                    h4 {
+                        font-weight: 600;
+                    }
+                    p {
+                        font-weight: 300;
+                    }
+                }
+                ul {
+                    display: flex;
+                    li {
+                        margin-right: 1em;
+                        list-style-type: none;
+                        
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            border: .5px solid $secondary_font_color;
+                            border-radius: 3px;
+                            padding: .5em 1em;
+                        }
+                    }
+                }
             }
         }
     }
