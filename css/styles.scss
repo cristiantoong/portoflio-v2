@@ -233,7 +233,8 @@ header {
                 }
             }
             .right-info {
-                width: 40%;
+                width: 350px;
+                height: 250px;
                 h2 {
                     margin-bottom: 1em;
                 }
@@ -261,6 +262,7 @@ header {
                     }
                     }
                 }
+                
             }
         }
 
@@ -269,7 +271,7 @@ header {
             position: absolute;
             top: 40%;
             left: 20%;
-           
+            z-index: 101;
     
         }
         .next-btn {
@@ -301,10 +303,12 @@ header {
                 img {
                     width: 100%;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
             .right-info {
-                width: 40%;
+                width: 350px;
+                height: 250px;
                 h2 {
                     margin-bottom: 1em;
                     

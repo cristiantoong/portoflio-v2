@@ -308,7 +308,8 @@ header a .cta-btn:hover {
 }
 
 #modal .modal-content .project .right-info {
-  width: 40%;
+  width: 350px;
+  height: 250px;
 }
 
 #modal .modal-content .project .right-info h2 {
@@ -351,6 +352,7 @@ header a .cta-btn:hover {
   position: absolute;
   top: 40%;
   left: 20%;
+  z-index: 101;
 }
 
 #modal .next-btn {
@@ -388,10 +390,13 @@ header a .cta-btn:hover {
 .modals .modal .project-1 .left-info img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .modals .modal .project-1 .right-info {
-  width: 40%;
+  width: 350px;
+  height: 250px;
 }
 
 .modals .modal .project-1 .right-info h2 {

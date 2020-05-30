@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap");
+@-webkit-keyframes fadeInOut {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}
+
 @media screen and (max-width: 550px) {
   nav {
     padding: 1em 1em;
@@ -43,6 +60,89 @@
     height: 45px;
     padding: 11px 21px;
     font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  #modal .prev-btn {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 1740px) {
+  #modal .prev-btn {
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 1660px) {
+  #modal .prev-btn {
+    left: 16%;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  #modal .prev-btn {
+    left: 14%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #modal .prev-btn {
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  #modal .prev-btn {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  #modal .prev-btn {
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  #modal .prev-btn {
+    left: 6%;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  #modal .prev-btn {
+    left: 4%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #modal .prev-btn {
+    left: 2%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  #modal .prev-btn {
+    left: 0;
+  }
+  #modal .modal-content .project {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+  }
+  #modal .modal-content .project .left-info {
+    width: 250px;
+  }
+  #modal .modal-content .project .right-info {
+    width: 250px;
   }
 }
 /*# sourceMappingURL=media_queries.css.map */
