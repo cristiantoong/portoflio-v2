@@ -187,6 +187,10 @@ header {
 }
 
 
+.animateShow{
+    @include animation('fadeInOut 0.3s ease-in-out');
+}
+
 
 // MODAL
 #modal {
@@ -199,7 +203,9 @@ header {
     bottom: 0;
     display: flex;
     display: none;
-    z-index: 101;
+    z-index: 101;  
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
     .modal-content {
         color: #fff;
         background: rgba(0, 0, 0, 0);
@@ -258,28 +264,30 @@ header {
             }
         }
 
-    }
-    .prev-btn {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        left: 20%;
-        z-index: 102;
+        .prev-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            left: 20%;
+           
+    
+        }
+        .next-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            left: 78%;
+        }
+        .exit-btn {
+            cursor: pointer;
+            position: absolute;
+            top: 3%;
+            right: 1%;
+        }
+    
+        }
 
-    }
-    .next-btn {
-        cursor: pointer;
-        position: absolute;
-        top: 40%;
-        left: 78%;
-    }
-    .exit-btn {
-        cursor: pointer;
-        position: absolute;
-        top: 3%;
-        right: 1%;
-    }
-
+    
 
 .modals {
     display: none;

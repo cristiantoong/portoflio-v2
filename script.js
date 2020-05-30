@@ -37,7 +37,7 @@ window.addEventListener('click', function(e){
     } else {
         return false
     }
-    
+    modal.classList.toggle('animateShow');
 });
 
 
@@ -48,13 +48,14 @@ projects.forEach(function(project, index){
         modal.style.display = 'block';
         modal.style.transition = 'all 0.5s ease-in;';
         modalContent.style.transition = 'all 0.5s ease-in;';
+        modal.classList.toggle('animateShow');
         // console.log(e.target.parentElement, index)
         
         // display each project image content when click
         if(e.target.parentElement.classList.contains(`p${index + 1}`)){
             modalContent.innerHTML = modals[index].innerHTML;
 
-        e.preventDefault();
+            
         }
 
         

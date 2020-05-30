@@ -15,3 +15,19 @@
     line-height: $lheight;
     letter-spacing: $lspacing;
 }
+
+// Animation
+@mixin keyframes($animation-name) {
+    @keyframes #{$animation-name} {
+    @content;
+    }
+}
+
+@mixin animation($str) {
+    animation: #{$str};      
+}
+
+@include keyframes(fadeInOut) {
+    to{ opacity: 1; }
+    from { opacity: 0; }
+}
