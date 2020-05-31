@@ -2,6 +2,47 @@
 @import "scss/mixins";
 
 // Mobile
+@media screen and (max-width:330px) {
+    header {
+        padding: 2em!important;
+        h1 {
+            font-size: 2em!important;
+        }
+        h2 {
+            font-size: .9em!important;
+        }
+    }
+    #projects{
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width:375px) {
+    header {
+        padding: 0!important;
+        min-height: 80vh!important;
+        h1 {
+            font-size: 2.1em!important;
+        }
+        h2 {
+            font-size: .9em!important;
+        }
+    }
+    #projects{
+        padding: 0 1em;
+    }
+}
+
+@media screen and (max-width:420px) {
+    header {
+        padding: 0!important;
+        min-height: 90vh;
+    }
+    #projects{
+        padding: 0 1em;
+    }
+}
+
 @media screen and (max-width:550px){
     nav {
         padding: 1em 1em;
@@ -53,8 +94,47 @@
 }
 
 // Tablet
-@media screen and (max-width:700px) {
+@media screen and (max-width:748px) {
+    #projects {
+        .section-title {
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}
 
+// Tablet
+@media screen and (max-width:768px) {
+    header{   
+        min-height: 70vh;
+     }
+}
+
+// Tablet
+@media screen and (max-width:915px) {
+    header {
+        padding: 2em;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        height: 70vh;
+        h1 {
+            font-size: 2.5em;
+        }
+        .bold-text {
+            font-size: 1em;
+        }
+        h2 {
+            font-size: 1em;
+
+        }
+        a {
+            margin: 0 auto;
+        }
+
+    }
+   
 }
 
 // other
@@ -94,6 +174,14 @@
     }
 }
 
+@media screen and (max-width:1430px){
+    #projects {
+        .section-title {
+            margin-bottom: 3em;
+        }
+    }
+}
+
 @media screen and (max-width:1420px){
     #modal {
         .prev-btn {
@@ -115,6 +203,16 @@
         }
     }
 }
+
+@media screen and (max-width:1144px){
+    #projects {
+        flex-direction: column;
+        // .projects-gallery{
+        //     margin-bottom: 5em;
+        // }
+    }
+}
+
 @media screen and (max-width:1180px){
     #modal {
         .prev-btn {
@@ -128,7 +226,22 @@
             left: 2%;
         }
     }
+
+    header {
+        padding: 11em 9em;
+    }
 }
+
+@media screen and (max-width:1024px){
+    header {
+        min-height: 50vh;
+    }
+
+    #projects {
+        min-height: 50vh;
+    }
+}
+
 
 @media screen and (max-width:1020px){
     #modal {

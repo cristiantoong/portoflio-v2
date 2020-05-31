@@ -104,8 +104,8 @@ nav {
 
 // HEADER SECTION
 header {
-    padding: 18em 9em;
-    height: 100vh;
+    padding: 17em 9em;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -124,6 +124,9 @@ header {
         flex-direction: column;
         font-weight: 300;
         font-size: 1.4em;
+        span {
+            color: #c2c2c2;
+        }
     }
 
     a {
@@ -155,29 +158,28 @@ header {
 
 // PROJECTS SECTION
 #projects {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10em;
-    height: 100vh;
+    padding: 0 20em 5em 20em;
+    min-height: 66vh;
     max-width: 1440px;
-    height: 100vh;
+    
     .section-title{
-        // padding: 3em 0;
-        // font-size: 2em;
-        // width: 30%;
-        margin-right: 2em;
+        margin-bottom: 2em;
+        h1 {
+            font-weight: 400;
+            font-size: 1.5em;
+        }
     }
 
     .projects-gallery{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-        grid-template-rows: repeat(6, 250px);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: 200px 200px;
         grid-gap: 20px;
         .project {
             cursor: pointer;
             img {
                 width: 100%;
-                height: 100%;
+                height: 200px;
                 border-radius: 5px;
                 object-fit: cover;
             }
@@ -345,39 +347,114 @@ header {
 
 // ABOUT ME
 #about{
+    @include flex_center(center, center);
+    margin: 0 auto;
     background: $primary_color;
     padding: 5em 10em;
-    .about-me {
-        @include flex_center(space-evenly, initial);
 
         .left-info{
-            width: 40%;
+            width: 63%;
             h3 {
                 font-family: 'Playfair Display', serif;
                 font-weight: 400;
                 font-size: 1em;
                 color: $secondary_font_color;
                 margin-bottom: 1em;
+                
 
             }
-            p:nth-of-type(1) {
-                margin-bottom: 2em;
-            }
             p {
+                margin-bottom: 2em;
                 font-size: .9em;
                 font-weight: 300;
+                color: #c2c2c2;
+            }
+            p:nth-of-type(1) {
+                span {
+                    font-style: italic;
+                    font-weight: 600;
+                    color: $primary_font_color;
+                }
+            }
+
+            .right-info{
+                width: 92px;
+                height: 92px;
+                filter: grayscale(100%);
+                transition: all .3s ease-in-out;
+                &:hover {
+                    filter: unset;
+                }
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                }
+                
             }
         }
-        .right-info{
-            width: 100px;
-            height: 100px;
-            img {
-                border-radius: 50%;
-                width: 100%;
-                height: 100%;
+
+        
+
+}
+
+
+// CONTACTS
+#contact {
+    padding: 5em 23em;
+    .contact-email {
+        margin-bottom: 2em;
+        h1 {
+            font-weight: 400;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        p{
+            font-size: .9em;
+            font-weight: 300;
+            margin-bottom: 2em;
+            color: #c2c2c2;
+            a{
+                color: $primary_font_color;
+                text-decoration: none;
             }
-            
+            a.email-link {
+                color: #824321;
+            }
         }
     }
-    
-}
+
+    .main-contact {
+        border-top: 1px solid #595959;
+        @include flex_center(space-between, initial);
+        padding-top: 1em;
+        padding-bottom: 0;
+            .left-contact {
+                @include flex_center(center, center);
+                .copyright {
+                    margin-left: 2em;
+                    p{
+                        font-size: .8em;
+                        color: #c2c2c2;
+                    }
+                }
+            }
+            a{
+                color: $primary_font_color;
+                text-decoration: none;
+            }
+        }
+
+        .socials {
+            ul {
+                @include flex_center(space-evenly, initial);
+                list-style-type: none;
+                li {
+                    margin-left: 1em;
+                    a {
+                        color: white!important;
+                    }
+                }
+            }
+        }
+    }

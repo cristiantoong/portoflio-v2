@@ -142,8 +142,8 @@ nav .burger-menu .menu3 {
 }
 
 header {
-  padding: 18em 9em;
-  height: 100vh;
+  padding: 17em 9em;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,6 +179,10 @@ header h2 {
   font-size: 1.4em;
 }
 
+header h2 span {
+  color: #c2c2c2;
+}
+
 header a {
   text-decoration: none;
   color: #ffffff;
@@ -210,29 +214,27 @@ header a .cta-btn:hover {
 }
 
 #projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 10em;
-  height: 100vh;
+  padding: 0 20em 5em 20em;
+  min-height: 66vh;
   max-width: 1440px;
-  height: 100vh;
 }
 
 #projects .section-title {
-  margin-right: 2em;
+  margin-bottom: 2em;
+}
+
+#projects .section-title h1 {
+  font-weight: 400;
+  font-size: 1.5em;
 }
 
 #projects .projects-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(19em, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-  -ms-grid-rows: (250px)[6];
-      grid-template-rows: repeat(6, 250px);
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-rows: 200px 200px;
+      grid-template-rows: 200px 200px;
   grid-gap: 20px;
 }
 
@@ -242,7 +244,7 @@ header a .cta-btn:hover {
 
 #projects .projects-gallery .project img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -436,11 +438,137 @@ header a .cta-btn:hover {
 }
 
 #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
   background: #2b2b2b;
   padding: 5em 10em;
 }
 
-#about .about-me {
+#about .left-info {
+  width: 63%;
+}
+
+#about .left-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #848484;
+  margin-bottom: 1em;
+}
+
+#about .left-info p {
+  margin-bottom: 2em;
+  font-size: .9em;
+  font-weight: 300;
+  color: #c2c2c2;
+}
+
+#about .left-info p:nth-of-type(1) span {
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#about .left-info .right-info {
+  width: 92px;
+  height: 92px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+#about .left-info .right-info:hover {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+#about .left-info .right-info img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+#contact {
+  padding: 5em 23em;
+}
+
+#contact .contact-email {
+  margin-bottom: 2em;
+}
+
+#contact .contact-email h1 {
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+#contact .contact-email p {
+  font-size: .9em;
+  font-weight: 300;
+  margin-bottom: 2em;
+  color: #c2c2c2;
+}
+
+#contact .contact-email p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#contact .contact-email p a.email-link {
+  color: #824321;
+}
+
+#contact .main-contact {
+  border-top: 1px solid #595959;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  padding-top: 1em;
+  padding-bottom: 0;
+}
+
+#contact .main-contact .left-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .main-contact .left-contact .copyright {
+  margin-left: 2em;
+}
+
+#contact .main-contact .left-contact .copyright p {
+  font-size: .8em;
+  color: #c2c2c2;
+}
+
+#contact .main-contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#contact .socials ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,37 +578,14 @@ header a .cta-btn:hover {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
+  list-style-type: none;
 }
 
-#about .about-me .left-info {
-  width: 40%;
+#contact .socials ul li {
+  margin-left: 1em;
 }
 
-#about .about-me .left-info h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 1em;
-  color: #848484;
-  margin-bottom: 1em;
-}
-
-#about .about-me .left-info p:nth-of-type(1) {
-  margin-bottom: 2em;
-}
-
-#about .about-me .left-info p {
-  font-size: .9em;
-  font-weight: 300;
-}
-
-#about .about-me .right-info {
-  width: 100px;
-  height: 100px;
-}
-
-#about .about-me .right-info img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
+#contact .socials ul li a {
+  color: white !important;
 }
 /*# sourceMappingURL=styles.css.map */
