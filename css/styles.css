@@ -186,6 +186,7 @@ header h2 span {
 header a {
   text-decoration: none;
   color: #ffffff;
+  display: inline-block;
 }
 
 header a .cta-btn {
@@ -231,8 +232,8 @@ header a .cta-btn:hover {
 #projects .projects-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   -ms-grid-rows: 200px 200px;
       grid-template-rows: 200px 200px;
   grid-gap: 20px;
@@ -498,11 +499,25 @@ header a .cta-btn:hover {
 }
 
 #contact {
-  padding: 5em 23em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5em 10em;
 }
 
 #contact .contact-email {
   margin-bottom: 2em;
+  width: 63%;
 }
 
 #contact .contact-email h1 {
@@ -540,6 +555,7 @@ header a .cta-btn:hover {
           align-items: initial;
   padding-top: 1em;
   padding-bottom: 0;
+  width: 63%;
 }
 
 #contact .main-contact .left-contact {

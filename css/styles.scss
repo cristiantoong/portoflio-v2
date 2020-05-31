@@ -132,6 +132,7 @@ header {
     a {
         text-decoration: none;
         color: $primary_font_color;
+        display: inline-block;
         .cta-btn {
             font-size: 1.2em;
             width: 158px;
@@ -172,7 +173,7 @@ header {
 
     .projects-gallery{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-template-rows: 200px 200px;
         grid-gap: 20px;
         .project {
@@ -401,9 +402,14 @@ header {
 
 // CONTACTS
 #contact {
-    padding: 5em 23em;
+    @include flex_center(center, center);
+    flex-direction: column;
+    padding: 5em 10em;
+
+    
     .contact-email {
         margin-bottom: 2em;
+        width: 63%;
         h1 {
             font-weight: 400;
             font-size: 1.5em;
@@ -429,6 +435,7 @@ header {
         @include flex_center(space-between, initial);
         padding-top: 1em;
         padding-bottom: 0;
+        width: 63%;
             .left-contact {
                 @include flex_center(center, center);
                 .copyright {

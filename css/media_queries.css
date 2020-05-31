@@ -48,6 +48,12 @@
   }
 }
 
+@media screen and (max-width: 411px) {
+  header {
+    min-height: 50vh !important;
+  }
+}
+
 @media screen and (max-width: 420px) {
   header {
     padding: 0 !important;
@@ -103,6 +109,32 @@
     padding: 11px 21px;
     font-size: .9em;
   }
+  #contact .contact-email {
+    width: 100%;
+  }
+  #contact .main-contact {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  #about {
+    padding: 5em 1em !important;
+  }
+  #contact {
+    padding: 5em 5em;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  header {
+    min-height: 100vh;
+    padding-bottom: 10em !important;
+  }
+  #projects {
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+  }
 }
 
 @media screen and (max-width: 748px) {
@@ -114,6 +146,15 @@
 @media screen and (max-width: 768px) {
   header {
     min-height: 70vh;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  #about {
+    padding: 5em 5em;
+  }
+  #contact {
+    padding: 5em 5em;
   }
 }
 
@@ -196,11 +237,12 @@
 }
 
 @media screen and (max-width: 1144px) {
+  header {
+    padding-top: 20em !important;
+  }
   #projects {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    padding: 5em 10em 5em 10em;
+    text-align: center;
   }
 }
 
@@ -219,9 +261,21 @@
   }
 }
 
+@media screen and (max-width: 1052px) {
+  #contact .main-contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact .main-contact .left-contact {
+    margin-bottom: 2em;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   header {
-    min-height: 50vh;
+    min-height: 90vh;
   }
   #projects {
     min-height: 50vh;
