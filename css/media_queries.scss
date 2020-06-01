@@ -41,7 +41,7 @@
 
 @media screen and (max-width:420px) {
     header {
-        padding: 0!important;
+        padding: 0 1.5em!important;
         min-height: 90vh;
     }
     #projects{
@@ -49,14 +49,7 @@
     }
 }
 
-// @media screen and (max-width:450px) {
-//     #about {
-//         text-align: center;
-//     }
-//     #contact {
-//         text-align: center;
-//     }
-// }
+
 
 @media screen and (max-width:550px){
     nav {
@@ -188,6 +181,7 @@
         }
         h2 {
             font-size: 1em;
+            margin-bottom: 3em;
 
         }
         a {

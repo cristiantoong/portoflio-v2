@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
-@-webkit-keyframes fadeInOut {
+@-webkit-keyframes fadeIn {
   to {
     opacity: 1;
   }
@@ -8,12 +8,30 @@
     opacity: 0;
   }
 }
-@keyframes fadeInOut {
+@keyframes fadeIn {
   to {
     opacity: 1;
   }
   from {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
   }
 }
 
@@ -24,10 +42,15 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   color: #ffffff;
+  font-size: 1.2em;
 }
 
 body.night {
@@ -99,7 +122,7 @@ nav .burger-menu .menu2 {
 
 nav .burger-menu .menu3 {
   width: 15px;
-  height: 1.5px;
+  height: 2.5px;
   background: #848484;
   margin-bottom: .3em;
 }
@@ -142,7 +165,7 @@ nav .burger-menu .menu3 {
 }
 
 header {
-  padding: 17em 9em;
+  padding: 17em 12em;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,8 +176,6 @@ header {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 header h1 {
@@ -187,21 +208,17 @@ header a {
   text-decoration: none;
   color: #ffffff;
   display: inline-block;
-}
-
-header a .cta-btn {
   font-size: 1.2em;
-  width: 158px;
-  height: 50px;
+  width: 180px;
   background: #9466BC;
   border-radius: 3px;
-  padding: 10px 24px;
+  padding: 10px 22px;
   margin-top: 4em;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
 
-header a .cta-btn:hover {
+header a:hover {
   background: #a275c9;
 }
 
@@ -217,7 +234,6 @@ header a .cta-btn:hover {
 #projects {
   padding: 0 20em 5em 20em;
   min-height: 66vh;
-  max-width: 1440px;
 }
 
 #projects .section-title {
@@ -232,8 +248,8 @@ header a .cta-btn:hover {
 #projects .projects-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   -ms-grid-rows: 200px 200px;
       grid-template-rows: 200px 200px;
   grid-gap: 20px;
@@ -252,8 +268,18 @@ header a .cta-btn:hover {
 }
 
 .animateShow {
-  -webkit-animation: fadeInOut 0.3s ease-in-out;
-          animation: fadeInOut 0.3s ease-in-out;
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+
+.btnFadeIn {
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+
+.btnFadeOut {
+  -webkit-animation: fadeOut 0.3s ease-in-out;
+          animation: fadeOut 0.3s ease-in-out;
 }
 
 #modal {
@@ -479,8 +505,8 @@ header a .cta-btn:hover {
 }
 
 #about .left-info .right-info {
-  width: 92px;
-  height: 92px;
+  width: 82px;
+  height: 82px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: all .3s ease-in-out;
@@ -603,5 +629,23 @@ header a .cta-btn:hover {
 
 #contact .socials ul li a {
   color: white !important;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  display: none;
+  z-index: 103;
+  border-radius: 5px;
+}
+
+.scrollToTop:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=styles.css.map */
