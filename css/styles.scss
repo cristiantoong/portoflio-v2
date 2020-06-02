@@ -34,8 +34,11 @@ nav {
     position: fixed;
     z-index: 99;
     .logo {
-        h3 {
-            color: white;
+        width: 45px;
+        height: 35px;
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
     .main-nav {
@@ -446,6 +449,16 @@ header {
         width: 63%;
             .left-contact {
                 @include flex_center(center, center);
+                a {
+                    .logo-contact {
+                        width: 45px;
+                        height: 35px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
                 .copyright {
                     margin-left: 2em;
                     p{
