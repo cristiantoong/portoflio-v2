@@ -254,20 +254,19 @@ header a:hover {
 #projects .projects-gallery {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  -ms-grid-rows: 200px 200px;
-      grid-template-rows: 200px 200px;
-  grid-gap: 20px;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
 }
 
 #projects .projects-gallery .project {
   cursor: pointer;
+  height: 300px;
 }
 
 #projects .projects-gallery .project img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -486,7 +485,8 @@ header a:hover {
 }
 
 #about .left-info {
-  width: 63%;
+  width: 50%;
+  margin-right: 2em;
 }
 
 #about .left-info h3 {
@@ -510,22 +510,27 @@ header a:hover {
   color: #ffffff;
 }
 
-#about .left-info .right-info {
-  width: 82px;
-  height: 82px;
+#about .left-info p:last-child a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+#about .right-info {
+  width: 250px;
+  height: 300px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-#about .left-info .right-info:hover {
+#about .right-info:hover {
   -webkit-filter: unset;
           filter: unset;
 }
 
-#about .left-info .right-info img {
-  border-radius: 50%;
+#about .right-info img {
   width: 100%;
   height: 100%;
 }

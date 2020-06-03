@@ -177,14 +177,14 @@ header {
 
     .projects-gallery{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        grid-template-rows: 200px 200px;
-        grid-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 30px;
         .project {
             cursor: pointer;
+            height: 300px;
             img {
                 width: 100%;
-                height: 200px;
+                height: 100%;
                 border-radius: 5px;
                 object-fit: cover;
             }
@@ -365,7 +365,8 @@ header {
     padding: 5em 10em;
 
         .left-info{
-            width: 63%;
+            width: 50%;
+            margin-right: 2em;
             h3 {
                 font-family: 'Playfair Display', serif;
                 font-weight: 400;
@@ -388,22 +389,29 @@ header {
                     color: $primary_font_color;
                 }
             }
-
-            .right-info{
-                width: 82px;
-                height: 82px;
-                filter: grayscale(100%);
-                transition: all .3s ease-in-out;
-                &:hover {
-                    filter: unset;
+            p:last-child {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 400;
                 }
-                img {
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                }
-                
             }
+
+        }
+        .right-info{
+            width: 250px;
+            height: 300px;
+            filter: grayscale(100%);
+            transition: all .3s ease-in-out;
+            &:hover {
+                filter: unset;
+            }
+            img {
+                // border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+            
         }
 
         
