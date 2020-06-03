@@ -137,7 +137,24 @@
 
 @media screen and (max-width: 620px) {
   #about {
-    padding: 5em 1em !important;
+    padding: 5em 0 !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .left-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #about .right-info {
+    margin-bottom: 2em;
+    width: 152px;
+    height: 152px;
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
   }
   #contact {
     padding: 5em 5em;
