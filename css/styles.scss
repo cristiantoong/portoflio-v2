@@ -359,11 +359,15 @@ header {
 
 // ABOUT ME
 #about{
-    @include flex_center(center, center);
-    margin: 0 auto;
     background: $primary_color;
     padding: 5em 10em;
 
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
         .left-info{
             width: 50%;
             margin-right: 2em;
@@ -413,6 +417,8 @@ header {
             }
             
         }
+    }
+        
 
         
 
@@ -421,79 +427,83 @@ header {
 
 // CONTACTS
 #contact {
-    @include flex_center(center, center);
-    flex-direction: column;
     padding: 5em 10em;
-
     
-    .contact-email {
-        margin-bottom: 2em;
-        width: 63%;
-        h1 {
-            font-weight: 400;
-            font-size: 1.5em;
-            margin-bottom: 1em;
-        }
-        p{
-            font-size: .9em;
-            font-weight: 300;
+    .wrapper {
+        max-width: 960px;
+        margin: 0 auto;
+        
+        
+        .contact-email {
             margin-bottom: 2em;
-            color: #c2c2c2;
-            a{
-                color: $primary_font_color;
-                text-decoration: none;
+            width: 42%;
+            h1 {
+                font-weight: 400;
+                font-size: 1.5em;
+                margin-bottom: 1em;
             }
-            a.email-link {
-                color: #824321;
+            p{
+                font-size: .9em;
+                font-weight: 300;
+                margin-bottom: 2em;
+                color: #c2c2c2;
+                a{
+                    color: $primary_font_color;
+                    text-decoration: none;
+                }
+                a.email-link {
+                    color: #824321;
+                }
             }
         }
-    }
-
-    .main-contact {
-        border-top: 1px solid #595959;
-        @include flex_center(space-between, initial);
-        padding-top: 1em;
-        padding-bottom: 0;
-        width: 63%;
-            .left-contact {
-                @include flex_center(center, center);
-                a {
-                    .logo-contact {
-                        width: 45px;
-                        height: 35px;
-                        img{
-                            width: 100%;
-                            height: 100%;
+    
+        .main-contact {
+            border-top: 1px solid #595959;
+            @include flex_center(space-between, initial);
+            padding-top: 1em;
+            padding-bottom: 0;
+            width: 100%;
+                .left-contact {
+                    @include flex_center(center, center);
+                    a {
+                        .logo-contact {
+                            width: 45px;
+                            height: 35px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .copyright {
+                        margin-left: 2em;
+                        p{
+                            font-size: .8em;
+                            color: #c2c2c2;
                         }
                     }
                 }
-                .copyright {
-                    margin-left: 2em;
-                    p{
-                        font-size: .8em;
-                        color: #c2c2c2;
+                a{
+                    color: $primary_font_color;
+                    text-decoration: none;
+                }
+            }
+    
+            .socials {
+                ul {
+                    @include flex_center(space-evenly, initial);
+                    list-style-type: none;
+                    li {
+                        margin-left: 1em;
+                        a {
+                            color: white!important;
+                        }
                     }
                 }
             }
-            a{
-                color: $primary_font_color;
-                text-decoration: none;
-            }
-        }
-
-        .socials {
-            ul {
-                @include flex_center(space-evenly, initial);
-                list-style-type: none;
-                li {
-                    margin-left: 1em;
-                    a {
-                        color: white!important;
-                    }
-                }
-            }
-        }
     }
+    
+}
 
 .scrollToTop {
     position: fixed;

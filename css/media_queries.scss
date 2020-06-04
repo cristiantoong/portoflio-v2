@@ -37,6 +37,24 @@
     header {
         min-height: 50vh!important;
     }
+    #about {
+        .wrapper {
+            .left-info {
+                h3 {
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+    #contact {
+        .wrapper {
+            .contact-email {
+                margin-bottom: 2em;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:420px) {
@@ -46,6 +64,14 @@
     }
     #projects{
         padding: 0 1em;
+    }
+    #contact {
+        .wrapper {
+            .contact-email {
+                margin-bottom: 2em;
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -117,19 +143,20 @@
 @media screen and (max-width:620px) {
     #about {
         padding: 5em 0!important;
-        flex-direction: column;
-        .left-info{
-            order: 2;
+        
+        .wrapper {
+            flex-direction: column;
+            .left-info{
+                order: 2;
+            }
+            .right-info {
+                margin-bottom: 2em;
+                width: 152px;
+                height: 152px;
+                order: 1!important;
+            }
         }
-        .right-info {
-            margin-bottom: 2em;
-            width: 152px;
-            height: 152px;
-            order: 1!important;
-            // img {
-            //     border-radius: 50%;
-            // }
-        }
+        
     }
     #contact {
         padding: 5em 5em;
@@ -162,7 +189,20 @@
 // Tablet
 @media screen and (max-width:768px) {
     header{   
-        min-height: 70vh;
+        min-height: 50vh;
+     }
+     #about {
+         .wrapper {
+             text-align: center;
+         }
+     }
+     #contact {
+         .wrapper {
+            text-align: center;
+             .contact-email {
+                 width: 100%;
+             }
+         }
      }
 }
 
@@ -203,6 +243,31 @@
 
     }
    
+}
+
+@media screen and (max-width:970px) {
+    #about {
+        padding: 5em 0!important;
+        
+        .wrapper {
+            flex-direction: column;
+            .left-info{
+                order: 2;
+            }
+            .right-info {
+                margin-bottom: 2em;
+                width: 152px;
+                height: 152px;
+                order: 1!important;
+            }
+        }
+        
+    }
+    #contact {
+        .wrapper {
+            width: 100%!important;
+        }
+    }
 }
 
 // other
@@ -315,7 +380,8 @@
 
 @media screen and (max-width:1024px){
     header {
-        min-height: 90vh;
+        min-height: 50vh;
+        padding-bottom: 2em;
     }
 
     #projects {
