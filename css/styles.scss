@@ -278,6 +278,15 @@ header {
                 }
                 
             }
+            .mockup{
+                width: 800px;
+                height: 500px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
 
         .prev-btn {
@@ -351,6 +360,16 @@ header {
                         }
                     }
                 }
+            }
+        }
+
+        .mockup{
+            width: 800px;
+            height: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }

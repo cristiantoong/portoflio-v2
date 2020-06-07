@@ -382,6 +382,18 @@ header a:hover {
   padding: .5em 1em;
 }
 
+#modal .modal-content .mockup {
+  width: 800px;
+  height: 500px;
+}
+
+#modal .modal-content .mockup img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #modal .prev-btn {
   cursor: pointer;
   position: absolute;
@@ -467,6 +479,18 @@ header a:hover {
   border: 0.5px solid #848484;
   border-radius: 3px;
   padding: .5em 1em;
+}
+
+.modals .modal .mockup {
+  width: 800px;
+  height: 500px;
+}
+
+.modals .modal .mockup img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #about {
