@@ -25,6 +25,7 @@ let modalContent = document.querySelector('.modal-content');
 let modalList = [];
 let counter = 0;
 
+// Exit button
 modalExitBtn.addEventListener('click', function(){
     modal.style.display = 'none';
 });
@@ -54,8 +55,6 @@ projects.forEach(function(project, index){
         // display each project image content when click
         if(e.target.parentElement.classList.contains(`p${index + 1}`)){
             modalContent.innerHTML = modals[index].innerHTML;
-
-            
         }
 
         
