@@ -171,7 +171,7 @@ nav .burger-menu .menu3 {
 }
 
 header {
-  padding: 17em 12em;
+  padding: 14em 12em;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -186,12 +186,29 @@ header {
 
 header h1 {
   font-weight: 300;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   font-size: 3em;
+  letter-spacing: .07em;
 }
 
 header .bold-text {
   font-weight: 600;
+  font-size: 1.3em;
+  letter-spacing: .04em;
+}
+
+header .name::after {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #FD5457;
+  margin-left: .1em;
+}
+
+header h1 + h1 {
+  font-size: 2.5em;
 }
 
 header h2 {

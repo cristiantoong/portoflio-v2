@@ -112,21 +112,45 @@ nav {
 
 // HEADER SECTION
 header {
-    padding: 17em 12em;;
+    padding: 14em 12em;;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     // max-width: 1440px;
     // margin: 0 auto;
+    // &:nth-child(2) {
+    //     font-size: 3em;
+    // }
+
+    
     h1 {
         font-weight: 300;
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
         font-size: 3em;
+        letter-spacing: .07em;
     }
+
     .bold-text {
         font-weight: 600;
+        font-size: 1.3em;
+        letter-spacing: .04em;
     }
+    .name::after {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #FD5457;
+        margin-left: .1em;
+    }
+
+    h1 + h1 {
+        font-size: 2.5em;
+    }
+
+    
     h2 {
         display: flex;
         flex-direction: column;
